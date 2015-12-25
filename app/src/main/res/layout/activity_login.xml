@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background">
+
+    <LinearLayout
+        android:id="@+id/login_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <!-- 邮箱 -->
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:hint="邮箱"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- 密码 -->
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:hint="密码"
+                android:password="true"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- 登录 -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_common_selector"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Logo展示-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_above="@id/login_form"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_avator"
+        app:border_color="@color/primary_light"
+        app:border_width="2dp" />
+
+    <!-- 忘记密码 -->
+    <TextView
+        android:id="@+id/tv_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:text="忘记密码？"
+        android:textColor="@color/primary"
+        android:textSize="16dp" />
+
+    <!-- 注册 -->
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:text="没有账号？注册"
+        android:textColor="@color/primary"
+        android:textSize="16dp" />
+</RelativeLayout>
